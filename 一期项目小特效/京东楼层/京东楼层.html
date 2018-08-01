@@ -1,0 +1,218 @@
+<!doctype html>
+<title>京东楼层</title>
+<meta charset="utf-8">
+<script src="jquery-1.8.3.min.js"></script>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+/*	.header{
+		width:1200px;
+		height:1px;
+		margin:0 auto;
+		background: #FFA3CC;
+	}
+
+	.footer{
+		width:1200px;
+		height:1px;
+		margin:0 auto;
+		background: #FFA3CC;
+	}*/
+
+	#main-jdlc-small-wrap{
+		position:fixed;
+		top:100px;
+		right:50px;
+	}
+	#main-jdlc-small-wrap .main-jdlc-small{
+		width:120px;
+		height:30px;
+		background:#14CADF;
+		text-align:center;
+		line-height:30px;
+		margin-top:5px;
+		color: #fff;
+		font-weight: 800;
+		border-radius: 50px;
+	}
+	#main-jdlc-wrap{
+		width: 100%;
+		background: #FFA3CC;
+	}
+	.main-jdlc{
+		width:990px;
+		margin:0 auto;
+		/*background:yellow;*/
+	}
+
+	.mj-floor1{
+		height:778px;
+		background: #FFA3CC;
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor2{
+		height:154px;
+		/*background: red;*/
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor3{
+		height:579px;
+		/*background: #FFA3CC;*/
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor4{
+		height:755px;
+		/*background:	green;*/
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor5{
+		height:750px;
+		/*background: pink;*/
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor6{
+		height:778px;
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor7{
+		height:154px;
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor8{
+		height:579px;
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor9{
+		height:755px;
+		/*margin-bottom:20px;*/
+	}
+	.mj-floor10{
+		height:750px;
+		/*margin-bottom:20px;*/
+	}
+	#main-jdlc-small-top{
+		color: #fff;
+		text-decoration: none;
+	}
+</style>
+<!-- <div class="header"></div> -->
+<div id="main-jdlc-wrap">
+	<div class="main-jdlc">
+
+		<div class="mj-floor1 mj-floor">
+			<img src="./images/5af3bdccN0ff65b10.jpg">
+			<img src="./images/2018-05-20_150414.jpg">
+		</div>
+		<div class="mj-floor2 mj-floor">
+			<img src="./images/2018-05-20_152630.jpg">
+		</div>
+		<div class="mj-floor3 mj-floor">
+			<img src="./images/2018-05-20_153329.jpg">
+		</div>
+		<div class="mj-floor4 mj-floor">
+			<img src="./images/2018-05-20_155401.jpg">
+		</div>
+		<div class="mj-floor5 mj-floor">
+			<img src="./images/2018-05-20_160100.jpg">
+		</div>
+		<div class="mj-floor6 mj-floor">
+			<img src="./images/5af3bdccN0ff65b10.jpg">
+			<img src="./images/2018-05-20_150414.jpg">
+		</div>
+		<div class="mj-floor7 mj-floor">
+			<img src="./images/2018-05-20_152630.jpg">
+		</div>
+		<div class="mj-floor8 mj-floor">
+			<img src="./images/2018-05-20_153329.jpg">
+		</div>
+		<div class="mj-floor9 mj-floor">
+			<img src="./images/2018-05-20_155401.jpg">
+		</div>
+		<div class="mj-floor10 mj-floor">
+			<img src="./images/2018-05-20_160100.jpg">
+		</div>
+
+	</div>
+</div>
+<!-- <div class="footer"></div> -->
+<ul id="main-jdlc-small-wrap">
+	<li class="main-jdlc-small">大牌助力520</li>
+	<li class="main-jdlc-small">好物排行</li>
+	<li class="main-jdlc-small">厨房小电</li>
+	<li class="main-jdlc-small">生活电器</li>
+	<li class="main-jdlc-small">个护健康</li>
+	<li class="main-jdlc-small">两季电器</li>
+	<li class="main-jdlc-small">个护健康</li>
+	<li class="main-jdlc-small">品质好店</li>
+	<li class="main-jdlc-small">京选好货</li>
+	<li class="main-jdlc-small">买遍全球</li>
+	<li class="main-jdlc-small"><a id="main-jdlc-small-top" href="#">Top∧</li>
+</ul>
+<script>
+	$(function(){
+		//点击li 滚动到对应的位置
+		$('.main-jdlc-small').click(function(){
+			//获取指定的li
+			var index=$(this).index();
+			//alert(index);
+			//当前楼层距离顶部的位置
+			//console.log($('.floor').eq(index).offset().top)
+
+			var top=$('.mj-floor').eq(index).offset().top;
+
+			//$('body,html').scrollTop(top);
+			//加动画
+			$('body,html').animate({
+				scrollTop:top
+			},500);
+
+		})
+
+		//获取每个楼层距离顶部的高度
+		var heights=[];
+
+		$('.mj-floor').each(function(){
+			//给数组添加数据 每一个高度
+			//向一个数组的尾部添加一个或者多个元素
+			heights.push($(this).offset().top);
+		});
+		//获取每个楼层距离顶部的高度
+		console.log(heights);
+
+
+
+		//当前文档的滚动监听事件
+		$(window).scroll(function(){
+			//获取现在的滚动距离
+			var top=$(window).scrollTop();
+			//alert(top);
+
+			//声明下标变量
+			var index;
+			//遍历每一个楼层距离顶部的高度
+			for(var i=0;i<heights.length;i++){
+				//1F 高度>=100 <2F的高度
+				if(top>=heights[i] && top<heights[i+1]){
+					//找到和1F对用的li的下标css 背景红色
+					index=i;
+					$('.main-jdlc-small').eq(index).css('background','red').siblings().css('background','#14CADF');
+					break;
+				//top >=6个
+				}else if(top>=heights[heights.length-1]){
+					//index重新赋值
+					index=heights.length-1;
+					//显示第七个的样式
+					$('.main-jdlc-small').eq(index).css('background','red').siblings().css('background','#14CADF');
+					break;
+				}
+			}
+		});
+
+	})
+</script>
+
+

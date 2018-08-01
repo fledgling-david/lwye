@@ -1,0 +1,228 @@
+<!doctype html>
+<title>scroll固定定位切换</title>
+<meta charset="utf-8">
+<script src="jquery-1.8.3.min.js"></script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+#search{
+	position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #f10214;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    display: none;
+    /*transition: top 2s;*/
+	}
+.search-fix .search-m {
+    margin: auto;
+    width: 1190px;
+    height: 48px;
+}
+.search-m {
+    position: relative;
+    z-index: 1;
+    height: 60px;
+}
+.search-fix .search-m .search_logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 125px;
+    height: 40px;
+}
+.search-fix .search-m .search_logo_lk {
+    background-position: -195px 0;
+    overflow: hidden;
+    display: block;
+    width: 125px;
+    height: 40px;
+    background-image: url(../images/sprite.head.png);
+    text-indent: -999px;
+}
+.search-fix .search-m #shelper {
+    top: 40px;
+}
+.root61 #shelper {
+    left: 320px;
+    width: 498px;
+}
+#shelper {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 270px;
+    top: 59px;
+    width: 398px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    -moz-box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+}
+.search-fix .search-m .form {
+    top: 6px;
+}
+.search-m .form {
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    width: 550px;
+    height: 35px;
+}
+.search-fix .search-m .text {
+    border-color: #efefef;
+    background-color: #efefef;
+}
+.search-m .text {
+    left: 0;
+    padding: 4px 44px 4px 4px;
+    width: 450px;
+    height: 25px;
+    border: 1px solid transparent;
+    line-height: 25px;
+    font-size: 14px;
+    color: #989898;
+}
+.photo-search-btn {
+    position: absolute;
+    right: 65px;
+    top: 10px;
+    width: 19px;
+    height: 15px;
+    overflow: hidden;
+}
+.search-m .button {
+    -moz-border-radius: 0;
+    border-radius: 0;
+    right: 0;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    background-color: #f10215;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.search-m .button, .search-m .text {
+    position: absolute;
+    top: 0;
+    outline: none;
+}
+#header-top-wrap-two{
+    width: 780px;
+    height: 35px;
+    /*background: #f0f;*/
+    margin-left: 300px;
+    position: absolute;
+    bottom: 8px;
+}
+#header-top-wrap-two #search-aaa-two{
+    width: 500px;
+    height: 35px;
+    border: none;
+    float: left;
+    outline:none;
+    padding-left: 10px;
+    position: relative;
+    background: #EFEFEF;
+}
+#header-top-wrap-two>i{
+    position: absolute;
+    left: 480px;
+    top: 3px;
+    z-index: 1;
+}
+#header-top-wrap-two #button{
+    width: 50px;
+    height: 35px;
+    border: none;
+    float: left;
+    outline:none;
+    cursor: pointer;
+    background: #F10215;
+}
+
+
+
+
+p{
+	width:800px;
+	height:200px;
+	background:pink;
+	margin-top:20px;
+}
+</style>
+<div id="search" class="search-fix">
+      <div class="search-m">
+        <div class="search_logo">
+          <a href="//www.jd.com" class="search_logo_lk" clstag="h|keycount|head|logo_01">京东，多快好省</a>
+        </div>
+        <ul id="shelper" style="display: none"></ul>
+        <div id="header-top-wrap-two">
+            <i class="iconfont icon-zhaoxiangji"></i>
+            <input type="text" name="text" id="search-aaa-two" placeholder="买新品赢大奖"><button id="button"><i class="iconfont icon-sousuo"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<script>
+	// scroll
+         /*
+        1.通过判断滚动条的位置》200
+        2.改变div 定位方式 静态定位 固定定位
+        3.通过判断滚动条的位置《200
+        4改变div 定位方式 固定定位 静态定位
+    */
+    //获取指定div元素
+    var dddd=document.getElementById('search');
+
+    //滚动事件
+    window.onscroll=function(){
+        //alert(11);
+
+        //scrollTop值 兼容处理
+        var yyyy=document.documentElement.scrollTop||window.pageYOffset;
+
+        // console.log(yyyy);
+
+        //判断y>=400
+        if(yyyy>=400){
+            $(dddd).slideDown();
+        }else if(yyyy<400){
+            //回到原来的位置
+            $(dddd).hide();
+
+        }
+    }
+
+
+</script>

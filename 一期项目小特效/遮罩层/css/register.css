@@ -1,0 +1,238 @@
+.mask{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.2);
+    z-index:1002;
+    /*opacity:0.3;*/
+}
+#tt{
+    width:955px;
+    height:604px;
+    background:#fff;
+    position:absolute;
+    left:197px;
+    top:0;
+    z-index:1003;
+    border: 4px solid rgba(0,0,0,.1);
+    /*display:none;*/
+    border-radius: 5px;
+}
+#tt>div{
+
+}
+#tt>div>div:nth-of-type(1){
+    background: #F3F3F3;
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    color: #000;
+    font-weight: 700;
+}
+#tt>div>div:nth-of-type(1)>#gb-btn{
+    position:absolute;
+    right:10px;
+    /*height: 31px;*/
+    margin-top: 10px;
+    background: none;
+    border: none;
+}
+#tt>div>div:nth-of-type(2){
+    width: 890px;
+    height: 426px;
+    padding: 10px;
+    line-height: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto 25px;
+}
+#tt>div>div:nth-of-type(3)>div{
+    width: 430px;
+    margin: 0 auto;
+}
+#tt>div>div:nth-of-type(3)>div>a>button{
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    line-height: 54px;
+    border: none;
+    /*color: #999;*/
+    font-size: 16px;
+    vertical-align: middle;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    /*margin-right: 30px;*/
+    /*background: #e3e4e5;*/
+}
+#tt>div>div:nth-of-type(3)>div>a:nth-of-type(1)>button{
+    color: #999;
+    margin-right: 30px;
+    background: #e3e4e5;
+}
+#tt>div>div:nth-of-type(3)>div>a:nth-of-type(2)>button{
+    color: #fff;
+    background: #EE2222;
+}
+
+.header {
+    height: 110px;
+    background: url(../images/headbg.jpg) repeat-x left bottom;
+}
+#header-wrap,#content-wrap,#footer-wrap{
+    width: 100%;
+}
+#header-wrap{
+    height: 110px;
+}
+#header>div:nth-of-type(1){
+    margin-left: 70px;
+}
+#header>div:nth-of-type(2){
+    /*float: right;*/
+    margin-right: 70px;
+    margin-top:50px;
+    color:#999;
+}
+#header>div:nth-of-type(2)>a{
+    color: #EE2222;
+}
+#content-wrap{
+    width: 100%;
+    padding: 50px 0;
+}
+#content{
+    /*padding: 30px 0;*/
+    width: 405px;
+    height:437px;
+    margin:  0 auto 200px;
+}
+#footer-wrap{
+    height:407px;
+    margin: 0 auto;
+}
+#form-table{
+
+}
+#form-table tr td{
+    width: 400px;
+}
+#form-table tr:nth-of-type(1) td{
+    height: 52px;
+}
+#form-table tr:nth-of-type(1)>td>label{
+    border: solid 1px #ddd;
+    border-right: none;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+    color: #666;
+    float: left;
+    width: 87px;
+    height: 50px;
+    line-height: 50px;
+}
+#form-table tr:nth-of-type(1)>td>input{
+    float: left;
+    width: 265px;
+    height: 50px;
+    border: solid 1px #ddd;
+    padding: 0;
+    padding-left: 20px;
+}
+#form-table tr:nth-of-type(2) td{
+    height: 34px;
+}
+#form-table tr:nth-of-type(3) td{
+    height: 54px;
+}
+#form-table tr:nth-of-type(3)>td>button{
+    line-height: 52px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    border: solid 1px #ddd;
+    width: 398px;
+    height: 52px;
+    background: none;
+}
+#form-table tr:nth-of-type(4) td{
+    height: 52px;
+}
+#form-table tr:nth-of-type(5) td{
+    height: 54px;
+}
+#form-table tr:nth-of-type(5)>td>button{
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    color: #fff;
+    background: #e2231a;
+    border: 0;
+    font-size: 16px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+    cursor: pointer;
+}
+
+
+#table-b{
+    width: 400px;
+    height: 25px;
+    margin-top: 20px;
+    color: #333;
+    font-size: 14px;
+}
+#table-b #qyyh-l{
+   width: 110px;
+   height: 25px;
+   float: left;
+
+}
+#table-b #gjzc-r{
+   width: 85px;
+   height: 25px;
+   float: right;
+}
+
+
+#header{
+    height:76px;
+}
+#header>div:nth-of-type(1){
+    float: left;
+}
+#header>div:nth-of-type(2){
+    float: right;
+}
+#content{
+    height:407px;
+}
+
+
+.links {
+    font-size: 12px;
+    width: 990px;
+    height: 20px;
+    margin: 20px auto;
+    color: #666;
+    text-align: center;
+}
+.links a {
+    color: #666;
+    text-decoration: none;
+}
+.links span {
+    padding: 0px 10px;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 30px;
+}

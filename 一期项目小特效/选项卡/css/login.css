@@ -1,0 +1,183 @@
+
+
+/*登录内容*/
+/*990 475*/
+section{
+    width: 100%;
+    background: #000;
+}
+
+
+/*登录背景图*/
+#main{
+    height: 475px;
+    background: url(../images/5af94079N9463179e.jpg) 0px 0px no-repeat;
+    background-color: #000000;
+}
+
+
+/*登录内容*/
+#login-form{
+    width: 992px;
+    height: 70px;
+    /*background: #fff;*/
+    /*float: right;*/
+    /*margin-top: 10px;*/
+}
+#l-f-top{
+    background: #fff8f0;
+    width: 100%;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    text-align: center;
+    height: 70px;
+}
+#ltt{
+    display: inline-block;
+    width: 90%;
+    position: relative;
+    /*float: left;*/
+}
+#ltt .icon-tips{
+    background: url(../images/icon-tips.png);
+    /*display: inline-block;*/
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    /*margin-right: 5px;*/
+}
+#ltt p{
+    margin-left: 15px;
+    color: #666;
+}
+.tab_t>div{
+    width: 248px;
+    height: 30px;
+    background: rgb(174, 39, 89);
+    float: left;
+    padding: 20px 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 30px;
+    font-size: 18px;
+}
+.tab_t>div{
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    /*line-height: 30px;*/
+    background: #48212F;
+}
+.tab_t>div:nth-of-type(2),
+.tab_t>div:nth-of-type(3),
+.tab_t>div:nth-of-type(4){
+    /*vertical-align: middle;*/
+    /*font-weight: 700;*/
+}
+
+.tab_t #smdl>span:hover,.tab_t #zhdl>span:hover{
+    color: #E4393C;
+    font-weight: 700;
+    cursor:pointer;
+}
+.tab_t #smdl>span{
+    /*border-right: 1px solid #F4F4F4;*/
+}
+.hide{
+    display: none;
+}
+.tab_t .selected{
+    /*font-weight: 700;*/
+    /*color: #E4393C;*/
+    background: #AE2759;
+}
+
+
+
+
+/*小家电*/
+#l-f-bottom{
+    width: 990px;
+    height: 680px;
+
+}
+#l-f-bottom>div:nth-of-type(1){
+    width: 990px;
+    height: 145px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+#l-f-bottom>div:nth-of-type(2){
+    width: 990px;
+    height: 495px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+#l-f-bottom>div:nth-of-type(2) ul{
+    /*height: 100%;*/
+}
+#l-f-bottom>div:nth-of-type(2) ul li{
+    float: left;
+    cursor: pointer;
+}
+
+
+
+/*小家电品牌*/
+#l-f-bottom2{
+    width: 100%;
+    height: 390px;
+    background: #fff;
+    overflow: hidden;
+}
+#l-f-bottom2>div:nth-of-type(1){
+    width: 990px;
+    height: 165px;
+    padding: 10px 0;
+}
+#l-f-bottom2>div:nth-of-type(1) ul li{
+    float: left;
+}
+#l-f-bottom2>div:nth-of-type(2){
+    width: 990px;
+    height: 185px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    /*text-align: center;*/
+}
+#l-f-bottom2>div:nth-of-type(2) img{
+    margin:0 auto;
+    height: 165px;
+}
+
+
+/*白条*/
+#l-f-bottom3{
+    width: 100%;
+    height: 380px;
+    padding-top: 10px;
+    /*background: #fff;*/
+
+    /*overflow: hidden;*/
+}
+#l-f-bottom3>div img{
+    margin:0 auto;
+    height: 165px;
+}
+
+/*家纺节*/
+#l-f-bottom4{
+    width: 100%;
+    height: 380px;
+    padding-top: 10px;
+    /*background: #fff;*/
+
+    /*overflow: hidden;*/
+}
+#l-f-bottom3>div img{
+    margin:0 auto;
+    /*height: 165px;*/
+}

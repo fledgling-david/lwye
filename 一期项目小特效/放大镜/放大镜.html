@@ -1,0 +1,163 @@
+<!doctype html>
+<title>放大镜</title>
+<meta charset="utf-8">
+<script src="jquery-1.8.3.min.js"></script>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	#p-m-l-small{
+		width:450px;
+		height:450px;
+		border:1px solid #eee;
+	}
+	#p-m-l-small img{
+		width:450px;
+		height: 450px;
+	}
+
+	#p-m-l-move{
+		width:300px;
+		height:300px;
+		border:1px solid #FEEEA7;
+		background:yellow;
+		position:absolute;
+		left:0px;
+		top:0px;
+		opacity:0.6;
+		display:none;
+	}
+
+	#p-m-l-big{
+		width:600px;
+		height:600px;
+		border:1px solid #eee;
+		position:absolute;
+		left:450px;
+		top:0px;
+		overflow:hidden;
+		display:none;
+	}
+	#p-m-l-big img{
+		position:absolute;
+		width: 900px;
+		height: 900px;
+	}
+
+	#p-m-l-dian{
+		width:450px;
+		height:60px;
+		border:1px solid green;
+		position:absolute;
+		left:0px;
+		top:450px;
+	}
+
+	#p-m-l-dian li img{
+		width:58px;
+		height:58px;
+	}
+
+	#p-m-l-dian li{
+		float:left;
+		margin-left:1.5px;
+		width: 58px;
+		height: 58px;
+		padding: 0 15px;
+	}
+</style>
+		<!--小图移动-->
+		<div id="p-m-l-small">
+			<img src="images/photo-image1.jpg" id="small_pic">
+			<div id="p-m-l-move"></div>
+		</div>
+		<!--大图移动-->
+		<div id="p-m-l-big">
+			<img src="images/photo-image1.jpg" id="bigPic">
+		</div>
+		<!--点更换图片-->
+		<ul id="p-m-l-dian">
+			<li><img src="images/photo-image1.jpg"></li>
+			<li><img src="images/photo-image2.jpg"></li>
+			<li><img src="images/photo-image3.jpg"></li>
+			<li><img src="images/photo-image4.jpg"></li>
+			<li><img src="images/photo-image5.jpg"></li>
+		</ul>
+<script>
+	$(function(){
+		//small中move移动
+		$('#p-m-l-small').mousemove(function(e){
+			//move big显示
+			$('#p-m-l-move,#p-m-l-big').show();
+
+			//move的坐标
+			var x=e.pageX-$(this).offset().left;
+			var y=e.pageY-$(this).offset().top;
+			//alert(x+':'+y)
+
+			//鼠标居中-move一半宽高
+			var x=x-$('#p-m-l-move').width()/2;
+			var y=y-$('#p-m-l-move').height()/2;
+
+			//边界判断
+			//左边
+			if(x<=0){
+				x=0
+			}
+			//上边
+			if(y<=0){
+				y=0;
+			}
+			//left的最大值
+			if(x>=$('#p-m-l-small').width()-$('#p-m-l-move').width()){
+				x=$('#p-m-l-small').width()-$('#p-m-l-move').width();
+			}
+
+			//top的最大值
+			if(y>=$('#p-m-l-small').height()-$('#p-m-l-move').height()){
+				y=$('#p-m-l-small').height()-$('#p-m-l-move').height();
+			}
+
+			//move绑定坐标
+			$('#p-m-l-move').css({left:x,top:y});
+
+			//算大图和小图比例关系
+			var scale=$('#p-m-l-big>img').width()/$('#p-m-l-small>img').width()
+			// alert(scale);
+
+			//big的移动距离=move距离*比例关系
+			$('#p-m-l-big').scrollLeft(x*scale);
+			$('#p-m-l-big').scrollTop(y*scale);
+
+			//大图src=small的src
+			$('#p-m-l-big>img').attr('src',$('#p-m-l-small>img').attr('src'))
+
+		}).mouseout(function(){
+			$('#p-m-l-move,#p-m-l-big').hide();
+		});
+
+
+		//点更换图片
+		$('#p-m-l-dian>li>img').mouseover(function(){
+			//small中img的src=当前img的src
+			$('#p-m-l-small>img').attr('src',$(this).attr('src'));
+		})
+
+
+
+
+
+
+	})
+</script>
+
+
+
+
+
+
+
+

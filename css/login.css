@@ -1,0 +1,437 @@
+头部*/
+header{
+    width: 100%;
+    background: #fff;
+}
+.login-top{
+    width: 990px;
+    height:60px;
+    margin: 8px auto;
+}
+/*头部logo*/
+#logo {
+    position: relative;
+    width: 300px;
+    /*margin: 10px 0;*/
+    height: 60px;
+    float: left;
+}
+#logo a img {
+    border: 0;
+}
+#logo a img {
+    vertical-align: middle;
+}
+#logo b {
+    display: block;
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/l-icon.png) no-repeat;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+.q-link {
+    position: relative;
+    color: #999;
+    float: right;
+    top: 42px;
+}
+.q-link b {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    margin: 0 5px;
+    background: url(../images/q-icon.png) no-repeat;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+
+.login-bottom-wrap{
+    width: 100%;
+    background: #FFF8F0;
+}
+.login-bottom{
+    height: 39px;
+}
+.tips-wrapper {
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.tips-wrapper .cont-wrapper {
+    display: inline-block;
+    width: 90%;
+}
+.tips-wrapper .icon-tips {
+    background: url(../images/icon-tips.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.tips-wrapper .tips-inner p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+.tips-wrapper .tips-inner .black {
+    color: #333;
+}
+
+
+/*登录内容*/
+/*990 475*/
+section{
+    width: 100%;
+    background: #000;
+}
+
+
+/*登录背景图*/
+#main{
+    height: 475px;
+    background: url(../images/5af94079N9463179e.jpg) 0px 0px no-repeat;
+    background-color: #000000;
+}
+
+
+/*登录内容*/
+#login-form{
+    width: 346px;
+    height: 428px;
+    /*background: #fff;*/
+    float: right;
+    margin-top: 10px;
+}
+#l-f-top{
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    height: 73px;
+}
+#ltt{
+    display: inline-block;
+    width: 90%;
+    position: relative;
+    /*float: left;*/
+}
+#ltt .icon-tips{
+    background: url(../images/icon-tips.png);
+    /*display: inline-block;*/
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    /*margin-right: 5px;*/
+}
+#ltt p{
+    margin-left: 15px;
+    color: #666;
+}
+.tab_t>div{
+    width: 173px;
+    height: 55px;
+    background: #fff;
+    float: left;
+    font-size: 18px;
+    line-height: 18px;
+    border-bottom: 1px solid #f4f4f4;
+    margin-top: 10px;
+    color: #666;
+}
+.tab_t #smdl>span,.tab_t #zhdl>span{
+    /*vertical-align: middle;*/
+    margin-top: 20px;
+    width: 172px;
+    display: inline-block;
+    text-align: center;
+}
+.tab_t #smdl>span:hover,.tab_t #zhdl>span:hover{
+    color: #E4393C;
+    font-weight: 700;
+    cursor:pointer;
+}
+.tab_t #smdl>span{
+    border-right: 1px solid #F4F4F4;
+}
+.hide{
+    display: none;
+}
+.tab_t .selected{
+    font-weight: 700;
+    color: #E4393C;
+}
+
+/*二维码登录*/
+#l-f-bottom{
+    width: 100%;
+    height: 335px;
+    background: #fff;
+    overflow: hidden;
+}
+#l-f-b-img{
+    width: 173px;
+    height: 165px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    border: 1px solid #F4F4F4;
+}
+#l-f-b-img img{
+    margin: 10px auto 0;
+    margin-top: 9px;
+    vertical-align: middle;
+}
+#l-t-b-p1{
+    width: 257px;
+    height: 18px;
+    margin: 18px auto 14px;
+}
+#l-t-b-p1 p{
+    text-align: center;
+}
+#l-t-b-p2{
+    width:266px;
+    height: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+#l-t-b-p2 p span{
+    padding: 0 15px;
+}
+#l-t-b-b-wrap{
+    width: 100%x;
+    height: 50px;
+    margin: 20px auto 0;
+    border-top: 1px solid #F4F4F4;
+    /*background: yellow;*/
+}
+#l-t-b-b{
+    width: 306px;
+    height: 50px;
+    margin: 15px auto 0;
+}
+#l-t-b-b p{
+    margin-left: 10px;
+}
+#l-t-b-b p:first-child{
+    width: 200px;
+}
+#l-t-b-b p:last-child{
+    width: 70px;
+}
+#l-t-b-b p:last-child a{
+    float: left;
+}
+#l-t-b-b p span{
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    margin-right: 30px;
+}
+#l-t-b-b p:first-child{
+    float: left;
+}
+#l-t-b-b p:last-child{
+    float: right;
+    position:relative;
+}
+#l-t-b-b #ltbb-qq{
+    width: 19px;
+    height: 18px;
+    background: url(../images/QQ-weixin.png) no-repeat;
+    display: inline-block;
+    /*background-position: 0 0;*/
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+#l-t-b-b #ltbb-wx{
+    width: 19px;
+    height: 18px;
+    background: url(../images/QQ-weixin.png) no-repeat;
+    display: inline-block;
+    background-position: -20px 0;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+#ltbb-line{
+    /*position: absolute;*/
+    display: inline-block;
+    left: -134px;
+}
+#ltbb-zc{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/pwd-icons-new.png) -104px -75px no-repeat;
+    position: absolute;
+    left: -20px;
+    top: 3px;
+}
+#l-t-b-b a{
+    color: #b61d1d;
+    font-size: 14px;
+}
+/*底部*/
+footer{
+    width: 100%;
+    background: #fff;
+}
+#footer{
+    height: 100px;
+    overflow: hidden;
+}
+#footer p:first-child{
+    margin-top: 20px;
+    /*text-align: center;*/
+}
+#footer p:last-child{
+    margin-top: 10px;
+}
+#footer p:first-child,#footer p:last-child{
+    text-align: center;
+}
+#footer p:first-child a,#footer p:first-child span,#footer p:last-child{
+    color: #666;
+}
+#footer p:first-child a,#footer p:first-child span{
+    padding: 0 5px;
+}
+
+/*帐号密码登录*/
+#l-f-bottom2{
+    width: 100%;
+    height: 307px;
+    background: #fff;
+    overflow: hidden;
+}
+#l-f-b2-wrap{
+    width: 100%;
+    height: 255px;
+    /*background: #00f;*/
+    overflow: hidden;
+}
+#l-f-b2{
+    /*width: 306;*/
+    height: 192px;
+    /*background: #f0f;*/
+    margin-top: 20px;
+}
+#l-f-b2 table{
+    margin:0 auto;
+    width: 306px;
+    height: 192px;
+}
+#l-f-b2 table input{
+    width: 284px;
+    height: 38px;
+    padding-left: 20px;
+}
+#l-f-b2 table span{
+    float: right;
+}
+#l-f-b2 table a{
+    display: inline-block;
+    border: 1px solid #e85356;
+    display: block;
+    width: 302px;
+    background: #e4393c;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+#l-t-b-b-wrap2{
+    width: 100%x;
+    height: 50px;
+    margin: 0px auto 0;
+    border-top: 1px solid #F4F4F4;
+    /*background: yellow;*/
+}
+#l-t-b-b2{
+    width: 306px;
+    height: 50px;
+    margin: 15px auto 0;
+}
+#l-t-b-b2 p{
+    margin-left: 10px;
+}
+#l-t-b-b2 p:first-child{
+    width: 200px;
+}
+#l-t-b-b2 p:last-child{
+    width: 70px;
+}
+#l-t-b-b2 p:last-child a{
+    float: left;
+}
+#l-t-b-b2 p span{
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    margin-right: 30px;
+}
+#l-t-b-b2 p:first-child{
+    float: left;
+}
+#l-t-b-b2 p:last-child{
+    float: right;
+    position:relative;
+}
+#l-t-b-b2 #ltbb-qq2{
+    width: 19px;
+    height: 18px;
+    background: url(../images/QQ-weixin.png) no-repeat;
+    display: inline-block;
+    /*background-position: 0 0;*/
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+#l-t-b-b2 #ltbb-wx2{
+    width: 19px;
+    height: 18px;
+    background: url(../images/QQ-weixin.png) no-repeat;
+    display: inline-block;
+    background-position: -20px 0;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+#ltbb-line2{
+    /*position: absolute;*/
+    display: inline-block;
+    left: 36px;
+    top: -18px;
+}
+#ltbb-zc2{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../images/pwd-icons-new.png) -104px -75px no-repeat;
+    position: absolute;
+    left: -20px;
+    top: 3px;
+}
+#l-t-b-b2 a{
+    color: #b61d1d;
+    font-size: 14px;
+}
